@@ -93,7 +93,8 @@ const calculate = () => {
 
 const plusMinus = () => {
   if (currentValue !== '') {
-    currentValue = `-${currentValue}`;
+    if (currentValue.charAt(0) === '-') currentValue = currentValue.substr(1);
+    else currentValue = `-${currentValue}`;
     currentDisplay.innerHTML = currentValue;
   }
 };
