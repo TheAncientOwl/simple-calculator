@@ -15,18 +15,30 @@ const reset = () => {
 };
 
 const addDigit = digit => {
+  const positiveCurrentValue = currentValue.startsWith('-') ? currentValue.substring(1) : currentValue;
+
   if (digit === '.') {
-    if (currentValue.includes('.')) return;
-    if (currentValue === '') currentValue += '0';
+    if (positiveCurrentValue.includes('.')) return;
+    if (positiveCurrentValue === '') currentValue += '0';
   }
 
-  if (currentValue === '0' && digit !== '.') currentValue += '.';
+  if (positiveCurrentValue === '0' && digit !== '.') currentValue += '.';
 
   currentValue += digit;
   currentDisplay.innerHTML = currentValue;
 };
 
 const operation = sign => {
+  if (currentValue === '' && lastValue === '') {
+    if (sign === '-') {
+      currentValue = '-';
+      currentDisplay.innerHTML = '-';
+    }
+    return;
+  }
+
+  if (currentValue === '-') return;
+
   if (lastOperation !== NO_OPERATION && currentDisplay !== '') {
     calculate();
     lastOperation = sign;
