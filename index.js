@@ -46,6 +46,8 @@ const operation = sign => {
 
 const removeDigit = () => {
   currentValue = currentValue.slice(0, -1);
+
+  if (currentValue === '-') currentValue = '';
   currentDisplay.innerHTML = currentValue;
 };
 
