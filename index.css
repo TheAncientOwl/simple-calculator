@@ -15,6 +15,16 @@ body {
   --color-accent-2: #406d24;
 }
 
+::-moz-selection {
+  color: var(--color-text);
+  background: var(--color-accent);
+}
+
+::selection {
+  color: var(--color-text);
+  background: var(--color-accent);
+}
+
 .calculator-container {
   background-color: var(--bg-1);
   border: 2px solid var(--color-accent);
