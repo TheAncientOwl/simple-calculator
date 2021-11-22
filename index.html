@@ -10,34 +10,49 @@
   </head>
   <body>
     <div class="calculator-container">
-      <div class="display">
-        <div id="calcHistory" class="number"></div>
-        <div id="currentDisplay" class="number"></div>
+      <div class="app-bar">
+        <div class="info">
+          <div class="icon">&#9889;</div>
+          <div class="app-title">Calculator</div>
+        </div>
+
+        <div class="controls">
+          <div class="control">&#128469;&#xFE0E;</div>
+          <div class="control">&#128470;&#xFE0E;</div>
+          <div class="control">&#128473;&#xFE0E;</div>
+        </div>
       </div>
 
-      <div class="calculator-grid">
-        <button class="reset background-accent" onclick="reset()">Reset</button>
-        <button onclick="removeDigit()">⌫</button>
+      <div class="app-logics">
+        <div class="display">
+          <div id="calcHistory" class="number"></div>
+          <div id="currentDisplay" class="number"></div>
+        </div>
 
-        <button onclick="addDigit('7')">7</button>
-        <button onclick="addDigit('8')">8</button>
-        <button onclick="addDigit('9')">9</button>
-        <button onclick="operation('÷')">÷</button>
+        <div class="calculator-grid">
+          <button class="reset background-accent" onclick="reset()">Reset</button>
+          <button onclick="removeDigit()">⌫</button>
 
-        <button onclick="addDigit('4')">4</button>
-        <button onclick="addDigit('5')">5</button>
-        <button onclick="addDigit('6')">6</button>
-        <button onclick="operation('×')">×</button>
+          <button onclick="addDigit('7')">7</button>
+          <button onclick="addDigit('8')">8</button>
+          <button onclick="addDigit('9')">9</button>
+          <button onclick="operation('÷')">÷</button>
 
-        <button onclick="addDigit('1')">1</button>
-        <button onclick="addDigit('2')">2</button>
-        <button onclick="addDigit('3')">3</button>
-        <button onclick="operation('-')">-</button>
+          <button onclick="addDigit('4')">4</button>
+          <button onclick="addDigit('5')">5</button>
+          <button onclick="addDigit('6')">6</button>
+          <button onclick="operation('×')">×</button>
 
-        <button onclick="addDigit('0')">0</button>
-        <button onclick="addDigit('.')">.</button>
-        <button class="background-accent" onclick="calculate()">=</button>
-        <button onclick="operation('+')">+</button>
+          <button onclick="addDigit('1')">1</button>
+          <button onclick="addDigit('2')">2</button>
+          <button onclick="addDigit('3')">3</button>
+          <button onclick="operation('-')">-</button>
+
+          <button onclick="addDigit('0')">0</button>
+          <button onclick="addDigit('.')">.</button>
+          <button class="background-accent" onclick="calculate()">=</button>
+          <button onclick="operation('+')">+</button>
+        </div>
       </div>
     </div>
   </body>
