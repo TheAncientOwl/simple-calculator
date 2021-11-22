@@ -29,6 +29,12 @@ body {
   }
 }
 
+@media (max-width: 350px) {
+  body {
+    font-size: 0.7rem;
+  }
+}
+
 ::-moz-selection {
   color: var(--color-text);
   background: var(--color-accent);
@@ -40,13 +46,13 @@ body {
 }
 
 .calculator-container {
-  max-width: 90vw;
   background-color: var(--bg-1);
   border: 2px solid var(--color-accent);
   color: var(--color-text);
   border-radius: 0.25em;
   display: inline-block;
   margin: 0 5px;
+  max-width: min(70vw, 45vh);
 }
 
 .app-logics {
@@ -76,6 +82,7 @@ body {
 
 .number {
   min-height: 1.25em;
+  overflow: auto;
 }
 
 .reset {
