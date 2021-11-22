@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js" defer></script>
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="display">
+        <div id="history" class="history">
+          <span id="result" class="number">500</span>
+          <span class="operation">+</span>
+        </div>
+        <span class="number">200</span>
+      </div>
+
+      <div class="calculator-grid">
+        <button class="reset background-accent" onclick="reset()">reset</button>
+        <button onclick="removeDigit()">⌫</button>
+
+        <button onclick="addDigit('7')">7</button>
+        <button onclick="addDigit('8')">8</button>
+        <button onclick="addDigit('9')">9</button>
+        <button onclick="operation('÷')">÷</button>
+
+        <button onclick="addDigit('4')">4</button>
+        <button onclick="addDigit('5')">5</button>
+        <button onclick="addDigit('6')">6</button>
+        <button onclick="operation('x')">x</button>
+
+        <button onclick="addDigit('1')">1</button>
+        <button onclick="addDigit('2')">2</button>
+        <button onclick="addDigit('3')">3</button>
+        <button onclick="operation('-')">-</button>
+
+        <button onclick="addDigit('0')">0</button>
+        <button onclick="addDigit('.')">.</button>
+        <button class="background-accent" onclick="calculate()">=</button>
+        <button onclick="operation('+')">+</button>
+      </div>
+    </div>
+  </body>
+</html>
