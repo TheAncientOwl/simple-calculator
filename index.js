@@ -28,15 +28,7 @@ const addDigit = digit => {
 };
 
 const operation = sign => {
-  if (currentValue === '' && lastValue === '') {
-    if (sign === '-') {
-      currentValue = '-';
-      currentDisplay.innerHTML = '-';
-    }
-    return;
-  }
-
-  if (currentValue === '-') return;
+  if (currentValue === '' && lastValue === '') return;
 
   if (lastOperation !== '' && currentDisplay !== '') {
     calculate();
@@ -95,4 +87,11 @@ const calculate = () => {
 
   calcHistory.innerHTML = `= ${lastValue}`;
   currentDisplay.innerHTML = currentValue;
+};
+
+const plusMinus = () => {
+  if (currentValue !== '') {
+    currentValue = `-${currentValue}`;
+    currentDisplay.innerHTML = currentValue;
+  }
 };
