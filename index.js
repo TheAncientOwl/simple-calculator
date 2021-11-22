@@ -47,7 +47,7 @@ const removeDigit = () => {
 };
 
 const calculate = () => {
-  if (lastValue === '') return;
+  if (lastValue === '' || currentValue === '') return;
 
   const x1 = parseFloat(lastValue);
   const x2 = parseFloat(currentValue);
