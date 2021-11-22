@@ -13,7 +13,7 @@ body {
   justify-content: center;
   padding-top: 2.5rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background: url('bg-image.jpg') no-repeat center center fixed;
+  background: url('https://source.unsplash.com/weekly?nature') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
