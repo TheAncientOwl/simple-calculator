@@ -11,15 +11,12 @@
   <body>
     <div class="calculator-container">
       <div class="display">
-        <div id="history" class="history">
-          <span id="result" class="number">500</span>
-          <span class="operation">+</span>
-        </div>
-        <span class="number">200</span>
+        <div id="calcHistory" class="number"></div>
+        <div id="currentDisplay" class="number"></div>
       </div>
 
       <div class="calculator-grid">
-        <button class="reset background-accent" onclick="reset()">reset</button>
+        <button class="reset background-accent" onclick="reset()">Reset</button>
         <button onclick="removeDigit()">⌫</button>
 
         <button onclick="addDigit('7')">7</button>
@@ -30,7 +27,7 @@
         <button onclick="addDigit('4')">4</button>
         <button onclick="addDigit('5')">5</button>
         <button onclick="addDigit('6')">6</button>
-        <button onclick="operation('x')">x</button>
+        <button onclick="operation('×')">×</button>
 
         <button onclick="addDigit('1')">1</button>
         <button onclick="addDigit('2')">2</button>
