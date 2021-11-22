@@ -1,10 +1,9 @@
 const calcHistory = document.getElementById('calcHistory');
 const currentDisplay = document.getElementById('currentDisplay');
 
-const NO_OPERATION = '';
 let currentValue = '';
 let lastValue = '';
-let lastOperation = NO_OPERATION;
+let lastOperation = '';
 
 const reset = () => {
   currentValue = '';
@@ -39,7 +38,7 @@ const operation = sign => {
 
   if (currentValue === '-') return;
 
-  if (lastOperation !== NO_OPERATION && currentDisplay !== '') {
+  if (lastOperation !== '' && currentDisplay !== '') {
     calculate();
     lastOperation = sign;
     calcHistory.innerHTML = `${lastValue} ${lastOperation}`;
@@ -92,7 +91,7 @@ const calculate = () => {
   const fixed = result.toFixed(5);
   lastValue = fixed - result === 0 ? result : fixed;
   currentValue = '';
-  lastOperation = NO_OPERATION;
+  lastOperation = '';
 
   calcHistory.innerHTML = `= ${lastValue}`;
   currentDisplay.innerHTML = currentValue;
