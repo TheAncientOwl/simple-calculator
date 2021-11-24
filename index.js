@@ -57,30 +57,26 @@ const calculate = () => {
   const x1 = parseFloat(lastValue);
   const x2 = parseFloat(currentValue);
 
-  let result = 0;
-  switch (lastOperation) {
-    case '+': {
-      result = x1 + x2;
-      break;
-    }
-    case '-': {
-      result = x1 - x2;
-      break;
-    }
-    case '×': {
-      result = x1 * x2;
-      break;
-    }
-    case '÷': {
-      if (x2 === 0) {
-        reset();
-        alert('Cannot divide by 0...');
-        return;
+  const getResult = () => {
+    switch (lastOperation) {
+      case '+':
+        return x1 + x2;
+      case '-':
+        return x1 - x2;
+      case '×':
+        return x1 * x2;
+      case '÷': {
+        if (x2 === 0) {
+          reset();
+          alert('Cannot divide by 0...');
+          return 'fail';
+        }
+        return x1 / x2;
       }
-      result = x1 / x2;
-      break;
     }
-  }
+  };
+  const result = getResult();
+  if (result === 'fail') return;
 
   const fixed = result.toFixed(5);
   lastValue = fixed - result === 0 ? result : fixed;
