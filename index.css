@@ -146,3 +146,21 @@ button.background-accent:hover {
 .app-title {
   letter-spacing: 0.75px;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-button);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-2);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
