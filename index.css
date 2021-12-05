@@ -52,7 +52,7 @@ body {
   border-radius: 0.25em;
   display: inline-block;
   margin: 0 5px;
-  max-width: min(70vw, 45vh);
+  max-width: min(70vw, 50vh);
 }
 
 .app-logics {
